@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+body {
+  @apply bg-white text-neutral-800 antialiased;
+}
+
+h1 {
+  @apply text-4xl md:text-6xl font-semibold tracking-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold tracking-tight;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed text-neutral-600;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

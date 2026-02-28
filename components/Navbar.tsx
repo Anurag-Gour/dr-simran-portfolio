@@ -1,24 +1,49 @@
 "use client";
 
-import Link from "next/link";
 import Container from "./Container";
 
 export default function Navbar() {
     return (
-        <nav className="py-6 border-b border-neutral-200">
+        <nav className="py-6 border-b border-neutral-200 bg-white sticky top-0 z-50">
             <Container className="flex justify-between items-center">
-                <Link
-                    href="/"
-                    className="text-lg font-semibold tracking-tight"
+
+                {/* Logo / Brand */}
+                <a
+                    href="#home"
+                    className="text-lg font-semibold tracking-tight text-neutral-900"
                 >
                     Dr. Simran Jeet Singh
-                </Link>
+                </a>
 
-                <div className="flex gap-8 text-sm font-medium">
-                    <Link href="/about">About</Link>
-                    <Link href="/expertise">Expertise</Link>
-                    <Link href="/cases">Cases</Link>
-                    <Link href="/contact">Contact</Link>
+                {/* Navigation Links */}
+                <div className="hidden md:flex gap-8 text-sm font-medium">
+                    <a
+                        href="#about"
+                        className="text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#expertise"
+                        className="text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                        Expertise
+                    </a>
+
+                    <a
+                        href="#cases"
+                        className="text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                        Cases
+                    </a>
+
+                    <a
+                        href="#contact"
+                        className="text-neutral-700 hover:text-blue-600 transition-colors"
+                    >
+                        Contact
+                    </a>
                 </div>
             </Container>
         </nav>

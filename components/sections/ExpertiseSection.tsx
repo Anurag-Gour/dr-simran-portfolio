@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default function ExpertisePage() {
-    const serviceIcons = {
+    const serviceIcons: Record<string, string> = {
         "Smile Design": "✨",
         "Cosmetic Dentistry": "💎",
         "Teeth Whitening": "🦷",

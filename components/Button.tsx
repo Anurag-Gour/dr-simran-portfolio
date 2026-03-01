@@ -4,12 +4,14 @@ interface ButtonProps {
     children: React.ReactNode;
     href: string;
     variant?: "primary" | "outline";
+    className?: string;
 }
 
 export default function Button({
     children,
     href,
     variant = "primary",
+    className = "",
 }: ButtonProps) {
     const base =
         "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-all duration-300";
@@ -20,7 +22,7 @@ export default function Button({
             : "border border-neutral-300 text-neutral-700 hover:bg-neutral-100";
 
     return (
-        <Link href={href} className={`${base} ${styles}`}>
+        <Link href={href} className={`${base} ${styles} ${className}`}>
             {children}
         </Link>
     );

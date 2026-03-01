@@ -58,6 +58,11 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
+                                <a href="#testimonials" className="hover:text-blue-400 transition inline-flex items-center gap-2">
+                                    <span>→</span> Testimonials
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#contact" className="hover:text-blue-400 transition inline-flex items-center gap-2">
                                     <span>→</span> Contact
                                 </a>

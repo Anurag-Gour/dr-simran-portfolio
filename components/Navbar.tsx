@@ -45,19 +45,16 @@ export default function Navbar() {
                     aria-label="Toggle menu"
                 >
                     <span
-                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${
-                            isOpen ? "rotate-45 translate-y-2" : ""
-                        }`}
+                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${isOpen ? "rotate-45 translate-y-2" : ""
+                            }`}
                     />
                     <span
-                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${
-                            isOpen ? "opacity-0" : ""
-                        }`}
+                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${isOpen ? "opacity-0" : ""
+                            }`}
                     />
                     <span
-                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${
-                            isOpen ? "-rotate-45 -translate-y-2" : ""
-                        }`}
+                        className={`w-6 h-0.5 bg-neutral-900 transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""
+                            }`}
                     />
                 </button>
             </Container>

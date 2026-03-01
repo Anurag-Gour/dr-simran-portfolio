@@ -40,3 +40,21 @@ p {
   --font-mono: var(--font-geist-mono);
 }
 
+/* Testimonials rotating ring */
+@keyframes testimonial-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-ring {
+  animation: testimonial-rotate 30s linear infinite;
+}
+
+.rotate-ring-paused {
+  animation-play-state: paused;
+}
+

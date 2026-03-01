@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import Section from "@/components/Section";
 import cases from "@/content/cases.json";
-import Image from "next/image";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 export const metadata = {
     title:
@@ -12,50 +12,62 @@ export const metadata = {
 
 export default function CasesPage() {
     return (
-        <Section id="cases">
+        <Section id="cases" className="bg-gradient-to-b from-white via-purple-50 to-white py-24">
             <Container>
-                <h1 className="mb-16 text-center">Case Portfolio</h1>
+                <div className="text-center mb-16">
+                    <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
+                        Real Results
+                    </p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900">
+                        Before & After <span className="text-blue-600">Gallery</span>
+                    </h2>
+                    <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+                        Real results from real patients. Drag the slider to compare the transformation.
+                    </p>
+                </div>
 
-                <div className="space-y-24">
+                {/* Cases Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
                     {cases.map((caseItem) => (
-                        <div key={caseItem.id}>
-                            <h2 className="text-2xl font-semibold mb-4">
+                        <div key={caseItem.id} className="group">
+                            {/* Case Title */}
+                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
                                 {caseItem.title}
-                            </h2>
-
-                            <p className="mb-8 text-neutral-600">
+                            </h3>
+                            <p className="text-sm text-neutral-600 mb-4">
                                 {caseItem.description}
                             </p>
 
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <Image
-                                        src={caseItem.beforeImage}
-                                        alt={caseItem.altBefore}
-                                        width={600}
-                                        height={400}
-                                        className="rounded-xl object-cover w-full"
-                                    />
-                                    <p className="text-sm text-neutral-500 mt-2">
-                                        Before
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <Image
-                                        src={caseItem.afterImage}
-                                        alt={caseItem.altAfter}
-                                        width={600}
-                                        height={400}
-                                        className="rounded-xl object-cover w-full"
-                                    />
-                                    <p className="text-sm text-neutral-500 mt-2">
-                                        After
-                                    </p>
-                                </div>
-                            </div>
+                            {/* Before/After Slider */}
+                            <BeforeAfterSlider
+                                beforeImage={caseItem.beforeImage}
+                                afterImage={caseItem.afterImage}
+                                beforeLabel="Before"
+                                afterLabel="After"
+                                altBefore={caseItem.altBefore}
+                                altAfter={caseItem.altAfter}
+                            />
                         </div>
                     ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-24">
+                    <div className="bg-white border border-blue-200 rounded-2xl p-12 md:p-14 text-center">
+                        <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+                            Ready to Transform Your Smile?
+                        </h3>
+                        <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
+                            Book your consultation today and let's create your perfect smile.
+                        </p>
+                        <a
+                            href="#contact"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105"
+                        >
+                            Book Your Consultation
+                            <span>→</span>
+                        </a>
+                    </div>
                 </div>
             </Container>
         </Section>

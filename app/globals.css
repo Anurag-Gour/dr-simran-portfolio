@@ -3,24 +3,34 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   @apply bg-white text-neutral-800 antialiased;
+  background: #ffffff !important;
+  color: #171717 !important;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  @apply text-4xl md:text-6xl font-semibold tracking-tight;
+  @apply text-4xl md:text-6xl font-semibold tracking-tight text-neutral-900;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  @apply text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900;
+}
+
+h3 {
+  @apply text-neutral-900;
 }
 
 p {
   @apply text-base md:text-lg leading-relaxed text-neutral-600;
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -30,15 +40,3 @@ p {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

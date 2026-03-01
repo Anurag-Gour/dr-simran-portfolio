@@ -7,7 +7,7 @@ import ContactSection from "@/components/sections/ContactSection";
 export default function Home() {
   return (
     <>
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AboutSection />
       <ExpertiseSection />
       <CasesSection />

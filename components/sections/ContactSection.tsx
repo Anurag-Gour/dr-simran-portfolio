@@ -8,76 +8,160 @@ export default function ContactPage() {
     const [loading, setLoading] = useState(false);
 
     return (
-        <Section id="contact">
+        <Section id="contact" className="bg-gradient-to-b from-white via-blue-50 to-white py-24">
             <Container>
-                <h1 className="mb-12 text-center">Book Consultation</h1>
+                <div className="text-center mb-20">
+                    <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
+                        Next Step
+                    </p>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-neutral-900">
+                        Let's Transform Your <span className="text-blue-600">Smile</span>
+                    </h2>
+                    <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+                        Ready to start your smile journey? Reach out and let's discuss your smile goals.
+                    </p>
+                </div>
 
-                <form
-                    action="https://formspree.io/f/mqedozoz"
-                    method="POST"
-                    onSubmit={() => setLoading(true)}
-                    className="max-w-2xl mx-auto space-y-6"
-                >
-                    {/* Honeypot Field (Anti-Spam) */}
-                    <input type="text" name="_gotcha" className="hidden" />
-
+                <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    {/* Left Column - Contact Info */}
                     <div>
-                        <label className="block mb-2 text-sm font-medium">
-                            Full Name
-                        </label>
-                        <input
-                            type="text"
-                            name="name"
-                            required
-                            className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
+                        <h3 className="text-2xl font-bold mb-8 text-neutral-900">
+                            Get In Touch
+                        </h3>
+
+                        <div className="space-y-4">
+                            {/* Phone Card */}
+                            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                                <p className="text-sm font-semibold text-blue-600 mb-2 uppercase tracking-wider">
+                                    📞 Phone
+                                </p>
+                                <p className="text-lg font-bold text-neutral-900">
+                                    +91 9876543210
+                                </p>
+                            </div>
+
+                            {/* Email Card */}
+                            <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                                <p className="text-sm font-semibold text-purple-600 mb-2 uppercase tracking-wider">
+                                    ✉️ Email
+                                </p>
+                                <p className="text-lg font-bold text-neutral-900">
+                                    hello@drsimran.com
+                                </p>
+                            </div>
+
+                            {/* Location Card */}
+                            <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-6 hover:shadow-lg transition-all">
+                                <p className="text-sm font-semibold text-green-600 mb-2 uppercase tracking-wider">
+                                    📍 Location
+                                </p>
+                                <p className="text-lg font-bold text-neutral-900">
+                                    Gandhinagar, Gujarat
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="mt-12">
+                            <h3 className="text-lg font-bold mb-6 text-neutral-900">
+                                Follow My Journey
+                            </h3>
+
+                            <div className="flex gap-4">
+                                <a
+                                    href="#"
+                                    className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white hover:shadow-lg hover:scale-110 transition-all text-xl font-bold"
+                                >
+                                    f
+                                </a>
+                                <a
+                                    href="#"
+                                    className="w-14 h-14 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white hover:shadow-lg hover:scale-110 transition-all text-xl"
+                                >
+                                    📸
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Right Column - Form */}
                     <div>
-                        <label className="block mb-2 text-sm font-medium">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            required
-                            className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
+                        <h3 className="text-2xl font-bold mb-8 text-neutral-900">
+                            Send a Message
+                        </h3>
+
+                        <form
+                            action="https://formspree.io/f/mqedozoz"
+                            method="POST"
+                            onSubmit={() => setLoading(true)}
+                            className="space-y-6 bg-gradient-to-br from-neutral-50 to-neutral-100 border border-neutral-200 rounded-2xl p-8"
+                        >
+                            {/* Honeypot Field (Anti-Spam) */}
+                            <input type="text" name="_gotcha" className="hidden" />
+
+                            <div>
+                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                    Your Name
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    placeholder="Enter your name"
+                                    className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-neutral-400 bg-white transition"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                    Email Address
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="Enter your email"
+                                    className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-neutral-400 bg-white transition"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                    Phone Number
+                                </label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Enter your phone number"
+                                    className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-neutral-400 bg-white transition"
+                                />
+                            </div>
+
+                            <div>
+                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                    Message
+                                </label>
+                                <textarea
+                                    name="message"
+                                    rows={4}
+                                    required
+                                    placeholder="Tell us about your smile goals..."
+                                    className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-neutral-400 bg-white transition resize-none"
+                                />
+                            </div>
+
+                            <input type="hidden" name="_redirect" value="/thank-you" />
+
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                            >
+                                {loading ? "Sending..." : "Send Message"}
+                            </button>
+                        </form>
                     </div>
-
-                    <div>
-                        <label className="block mb-2 text-sm font-medium">
-                            Phone
-                        </label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2 text-sm font-medium">
-                            Message
-                        </label>
-                        <textarea
-                            name="message"
-                            rows={4}
-                            required
-                            className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                    </div>
-
-                    <input type="hidden" name="_redirect" value="/thank-you" />
-
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
-                    >
-                        {loading ? "Sending..." : "Submit Request"}
-                    </button>
-                </form>
+                </div>
             </Container>
         </Section>
     );

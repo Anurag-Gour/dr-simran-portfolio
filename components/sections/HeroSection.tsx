@@ -17,7 +17,7 @@ export default function HeroSection() {
     return (
         <Section
             id="home"
-            className="min-h-screen flex items-center bg-gradient-to-br from-white via-blue-50 to-white"
+            className="bg-gradient-to-br from-white via-blue-50 to-white !py-12 md:!py-12"
         >
             <Container>
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -132,7 +132,7 @@ export default function HeroSection() {
                                     alt="Dr. Simran Jeet Singh - Consulting Aesthetic Dentist"
                                     width={600}
                                     height={700}
-                                    className="object-cover w-full h-[400px] md:h-[550px] group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                                     priority
                                 />
 

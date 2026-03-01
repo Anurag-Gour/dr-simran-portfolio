@@ -14,7 +14,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="py-6 border-b border-neutral-200 bg-white sticky top-0 z-50">
+        <nav className="py-3 border-b border-neutral-200 bg-white sticky top-0 z-50">
             <Container className="flex justify-between items-center">
 
                 {/* Logo / Brand */}

@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
     return (
         <Section
             id="testimonials"
-            className="bg-gradient-to-b from-white via-sky-50 to-white pt-24 pb-40"
+            className="bg-gradient-to-b from-white via-sky-50 to-white pt-20 pb-20"
         >
             <style jsx global>{`
                 .testimonial-marquee {
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
 
                 {/* Auto-rotating carousel with 2–3 visible flip cards */}
                 <div
-                    className="mt-4 pb-10"
+                    className="mt-4 pb-6"
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                 >

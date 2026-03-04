@@ -8,7 +8,7 @@ export default function ContactPage() {
     const [loading, setLoading] = useState(false);
 
     return (
-        <Section id="contact" className="bg-gradient-to-b from-white via-blue-50 to-white py-24">
+        <Section id="contact" className="bg-gradient-to-b from-white via-blue-50 to-white py-20">
             <Container>
                 <div className="text-center mb-20">
                     <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">

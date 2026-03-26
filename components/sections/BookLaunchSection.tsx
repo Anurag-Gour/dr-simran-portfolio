@@ -60,7 +60,7 @@ export default function BookLaunchSection() {
             </p>
 
             <div className="mt-6 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-5">
-              <p className="text-sm font-bold text-neutral-900">Highlights</p>
+              <h4 className="text-sm font-bold text-neutral-900">Highlights</h4>
               <div className="mt-3 grid sm:grid-cols-2 gap-3">
                 <div className="flex items-start gap-3">
                   <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-lg bg-white border border-blue-100 text-sm">
@@ -91,13 +91,13 @@ export default function BookLaunchSection() {
 
             <div className="mt-4 grid sm:grid-cols-2 gap-4">
               <div className="rounded-2xl border border-blue-100 bg-white p-5">
-                <p className="text-sm font-bold text-neutral-900">Who it’s for</p>
+                <h4 className="text-sm font-bold text-neutral-900">Who it’s for</h4>
                 <p className="mt-1 text-sm text-neutral-600">
                   Fresher dentists, interns, final-year students, and early-career clinicians.
                 </p>
               </div>
               <div className="rounded-2xl border border-blue-100 bg-white p-5">
-                <p className="text-sm font-bold text-neutral-900">Inside the chapters</p>
+                <h4 className="text-sm font-bold text-neutral-900">Inside the chapters</h4>
                 <p className="mt-1 text-sm text-neutral-600">
                   First patients, difficult conversations, building trust, and learning from mistakes.
                 </p>

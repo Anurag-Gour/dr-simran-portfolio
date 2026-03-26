@@ -50,14 +50,14 @@ export default function HeroSection() {
                         </motion.h1>
 
                         {/* Subtitle */}
-                        <motion.p
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="text-lg md:text-xl text-blue-600 font-semibold mb-4"
                         >
                             {doctor.title}
-                        </motion.p>
+                        </motion.h2>
 
                         {/* Description */}
                         <motion.p
@@ -144,10 +144,10 @@ export default function HeroSection() {
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 3, repeat: Infinity }}
-                                className="absolute -bottom-4 left-6 bg-white shadow-xl rounded-2xl px-6 py-4 border border-blue-200"
+                                className="absolute -bottom-4 left-6 bg-white shadow-xl rounded-2xl px-6 py-4 border border-blue-200 flex flex-col"
                             >
-                                <p className="font-bold text-blue-600 text-lg">Smile Design</p>
-                                <p className="text-xs text-neutral-600">Expert</p>
+                                <span className="font-bold text-blue-600 text-lg">Smile Design</span>
+                                <span className="text-xs text-neutral-600">Expert</span>
                             </motion.div>
                         </div>
                     </motion.div>

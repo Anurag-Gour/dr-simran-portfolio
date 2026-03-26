@@ -32,32 +32,32 @@ export default function ContactPage() {
                         <div className="space-y-4">
                             {/* Phone Card */}
                             <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-6 hover:shadow-lg transition-all">
-                                <p className="text-sm font-semibold text-blue-600 mb-2 uppercase tracking-wider">
+                                <h4 className="text-sm font-semibold text-blue-600 mb-2 uppercase tracking-wider">
                                     📞 Phone
-                                </p>
-                                <p className="text-lg font-bold text-neutral-900">
-                                    +91 9876543210
-                                </p>
+                                </h4>
+                                <div className="text-lg font-bold text-neutral-900">
+                                    <a href="tel:+919876543210" className="hover:text-blue-600 transition-colors">+91 9876543210</a>
+                                </div>
                             </div>
 
                             {/* Email Card */}
                             <div className="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-6 hover:shadow-lg transition-all">
-                                <p className="text-sm font-semibold text-purple-600 mb-2 uppercase tracking-wider">
+                                <h4 className="text-sm font-semibold text-purple-600 mb-2 uppercase tracking-wider">
                                     ✉️ Email
-                                </p>
-                                <p className="text-lg font-bold text-neutral-900">
-                                    hello@drsimran.com
-                                </p>
+                                </h4>
+                                <div className="text-lg font-bold text-neutral-900">
+                                    <a href="mailto:hello@drsimran.com" className="hover:text-purple-600 transition-colors">hello@drsimran.com</a>
+                                </div>
                             </div>
 
                             {/* Location Card */}
                             <div className="bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-6 hover:shadow-lg transition-all">
-                                <p className="text-sm font-semibold text-green-600 mb-2 uppercase tracking-wider">
+                                <h4 className="text-sm font-semibold text-green-600 mb-2 uppercase tracking-wider">
                                     📍 Location
-                                </p>
-                                <p className="text-lg font-bold text-neutral-900">
+                                </h4>
+                                <div className="text-lg font-bold text-neutral-900">
                                     Gandhinagar, Gujarat
-                                </p>
+                                </div>
                             </div>
                         </div>
 
@@ -69,13 +69,19 @@ export default function ContactPage() {
 
                             <div className="flex gap-4">
                                 <a
-                                    href="#"
+                                    href="https://facebook.com"
+                                    aria-label="Facebook Profile"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white hover:shadow-lg hover:scale-110 transition-all text-xl font-bold"
                                 >
                                     f
                                 </a>
                                 <a
-                                    href="#"
+                                    href="https://instagram.com"
+                                    aria-label="Instagram Profile"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-14 h-14 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white hover:shadow-lg hover:scale-110 transition-all text-xl"
                                 >
                                     📸
@@ -97,14 +103,16 @@ export default function ContactPage() {
                             className="space-y-6 bg-gradient-to-br from-neutral-50 to-neutral-100 border border-neutral-200 rounded-2xl p-8"
                         >
                             {/* Honeypot Field (Anti-Spam) */}
-                            <input type="text" name="_gotcha" className="hidden" />
+                            <label htmlFor="_gotcha" className="sr-only">Honeypot</label>
+                            <input type="text" id="_gotcha" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
                             <div>
-                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                <label htmlFor="name" className="block mb-2 text-sm font-semibold text-neutral-700">
                                     Your Name
                                 </label>
                                 <input
                                     type="text"
+                                    id="name"
                                     name="name"
                                     required
                                     placeholder="Enter your name"
@@ -113,11 +121,12 @@ export default function ContactPage() {
                             </div>
 
                             <div>
-                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                <label htmlFor="email" className="block mb-2 text-sm font-semibold text-neutral-700">
                                     Email Address
                                 </label>
                                 <input
                                     type="email"
+                                    id="email"
                                     name="email"
                                     required
                                     placeholder="Enter your email"
@@ -126,11 +135,12 @@ export default function ContactPage() {
                             </div>
 
                             <div>
-                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                <label htmlFor="phone" className="block mb-2 text-sm font-semibold text-neutral-700">
                                     Phone Number
                                 </label>
                                 <input
                                     type="tel"
+                                    id="phone"
                                     name="phone"
                                     placeholder="Enter your phone number"
                                     className="w-full border border-neutral-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-neutral-400 bg-white transition"
@@ -138,10 +148,11 @@ export default function ContactPage() {
                             </div>
 
                             <div>
-                                <label className="block mb-2 text-sm font-semibold text-neutral-700">
+                                <label htmlFor="message" className="block mb-2 text-sm font-semibold text-neutral-700">
                                     Message
                                 </label>
                                 <textarea
+                                    id="message"
                                     name="message"
                                     rows={4}
                                     required

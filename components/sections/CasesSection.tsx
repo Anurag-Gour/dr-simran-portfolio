@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function CasesPage() {
     return (
-        <Section id="cases" className="bg-gradient-to-b from-white via-purple-50 to-white py-24">
+        <Section id="cases" className="bg-gradient-to-b from-white via-purple-50 to-white py-12 md:py-16">
             <Container>
                 <div className="text-center mb-16">
                     <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
@@ -27,32 +27,36 @@ export default function CasesPage() {
                 </div>
 
                 {/* Cases Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {cases.map((caseItem) => (
-                        <div key={caseItem.id} className="group">
-                            {/* Case Title */}
-                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
-                                {caseItem.title}
-                            </h3>
-                            <p className="text-sm text-neutral-600 mb-4">
-                                {caseItem.description}
-                            </p>
+                        <div key={caseItem.id} className="group flex flex-col h-full">
+                            <div className="flex-grow">
+                                {/* Case Title */}
+                                <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                                    {caseItem.title}
+                                </h3>
+                                <p className="text-sm text-neutral-600 mb-4">
+                                    {caseItem.description}
+                                </p>
+                            </div>
 
                             {/* Before/After Slider */}
-                            <BeforeAfterSlider
-                                beforeImage={caseItem.beforeImage}
-                                afterImage={caseItem.afterImage}
-                                beforeLabel="Before"
-                                afterLabel="After"
-                                altBefore={caseItem.altBefore}
-                                altAfter={caseItem.altAfter}
-                            />
+                            <div className="mt-auto">
+                                <BeforeAfterSlider
+                                    beforeImage={caseItem.beforeImage}
+                                    afterImage={caseItem.afterImage}
+                                    beforeLabel="Before"
+                                    afterLabel="After"
+                                    altBefore={caseItem.altBefore}
+                                    altAfter={caseItem.altAfter}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>
 
                 {/* CTA Section */}
-                <div className="mt-24">
+                <div className="mt-16">
                     <div className="bg-white border border-blue-200 rounded-2xl p-12 md:p-14 text-center">
                         <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
                             Ready to Transform Your Smile?

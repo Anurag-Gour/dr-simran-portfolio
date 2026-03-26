@@ -19,7 +19,7 @@ export default function ExpertisePage() {
     ];
 
     return (
-        <Section id="expertise" className="bg-gradient-to-b from-white via-blue-50 to-white py-24">
+        <Section id="expertise" className="bg-gradient-to-b from-white via-blue-50 to-white py-12 md:py-16">
             <Container>
                 <div className="text-center mb-16">
                     <p className="text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">

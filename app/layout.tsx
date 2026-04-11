@@ -49,6 +49,8 @@ export const metadata: Metadata = {
   },
 };
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,9 +61,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,6 +79,6 @@ export default function RootLayout({
           }}
         />
       </body>
-    </html >
+    </html>
   );
 }

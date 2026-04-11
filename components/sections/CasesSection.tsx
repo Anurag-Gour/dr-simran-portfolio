@@ -27,7 +27,7 @@ export default function CasesPage() {
                 </div>
 
                 {/* Cases Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
                     {cases.map((caseItem) => (
                         <div key={caseItem.id} className="group flex flex-col h-full">
                             <div className="flex-grow">
